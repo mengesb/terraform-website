@@ -65,7 +65,7 @@ To create a new workspace:
 
 When you create a new workspace, a few things happen:
 
-- Terraform Cloud _doesn't_ immediately queue a plan for the workspace. Instead, it presents a dialog with shortcut links to either queue a plan or edit variables.
+- Terraform Cloud doesn't immediately queue a plan for the workspace. Instead, it presents a dialog with shortcut links to either queue a plan or edit variables.
 
     If you don't need to edit variables, confirm that the workspace is ready to run by manually queuing a plan.
 

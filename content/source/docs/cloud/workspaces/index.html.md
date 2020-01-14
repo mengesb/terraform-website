@@ -9,9 +9,9 @@ Workspaces are how Terraform Cloud organizes infrastructure.
 
 ## Workspaces are Collections of Infrastructure
 
-Working with Terraform involves _managing collections of infrastructure resources,_ and most organizations manage many different collections.
+Working with Terraform involves managing collections of infrastructure resources, and most organizations manage many different collections.
 
-When run locally, Terraform manages each collection of infrastructure with a _persistent working directory,_ which contains a configuration, state data, and variables. Terraform CLI uses content from the directory it runs in; by using separate directories, it's easy to organize infrastructure resources into meaningful groups.
+When run locally, Terraform manages each collection of infrastructure with a persistent working directory, which contains a configuration, state data, and variables. Terraform CLI uses content from the directory it runs in; by using separate directories, it's easy to organize infrastructure resources into meaningful groups.
 
 Terraform Cloud manages infrastructure collections with _workspaces_ instead of directories. A workspace contains everything Terraform needs to manage a given collection of infrastructure.
 
@@ -19,7 +19,7 @@ Terraform Cloud manages infrastructure collections with _workspaces_ instead of 
 
 ### Workspace Contents
 
-Terraform Cloud workspaces and local working directories serve the same purpose, but they store their data slightly differently:
+Terraform Cloud workspaces and local working directories serve the same purpose, but they store their data differently:
 
 Component | Local Terraform | Terraform Cloud
 --|--|--
@@ -69,4 +69,3 @@ We recommend that organizations break down large monolithic Terraform configurat
 For example, the code that manages your production environment's infrastructure could be split into a networking configuration, the main application's configuration, and a monitoring configuration. After splitting the code, you would create "networking-prod", "app1-prod", "monitoring-prod" workspaces, and assign separate teams to manage them.
 
 Much like splitting monolithic applications into smaller microservices, this enables teams to make changes in parallel. In addition, it makes it easier to re-use configurations to manage other environments of infrastructure ("app1-dev," etc.).
-
